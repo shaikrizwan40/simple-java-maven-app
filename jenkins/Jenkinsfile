@@ -3,6 +3,9 @@ pipeline {
     options {
         skipStagesAfterUnstable()
     }
+    tools {
+        maven 'Maven3.9.2'  // Must match the name you gave in Jenkins UI
+    }
     stages {
         stage('Build') {
             steps {
